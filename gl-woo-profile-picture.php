@@ -2,7 +2,7 @@
 /*
 Plugin Name: GL Woocommerce Profile Picture
 Plugin URI: https://www.greenlifeit.com/
-Description: Allows any user to upload their own profile picture to the WooCommerce My Account Page
+Description: Allows any user to upload their own profile picture from the WooCommerce My Account Page
 Version: 1.0
 Author: Asiqur Rahman <asikur22@gmail.com>
 Author URI: https://www.asique.net/
@@ -19,19 +19,19 @@ add_action( 'woocommerce_edit_account_form_tag', function () {
 
 add_action( 'woocommerce_edit_account_form_start', function () {
 	?>
-<fieldset>
-	<legend>Profile Picture</legend>
+	<fieldset>
+		<legend>Profile Picture</legend>
 
-	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-		<label><?php _e( 'Profile Picture', 'woocommerce' ); ?></label>
-		<?php echo get_avatar( get_current_user_id() ); ?>
-	</p>
+		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+			<label><?php _e( 'Profile Picture', 'woocommerce' ); ?></label>
+			<?php echo get_avatar( get_current_user_id() ); ?>
+		</p>
 
-	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-		<label for="profile_picture"><?php _e( 'Upload Profile Picture', 'woocommerce' ); ?></label>
-		<input type="file" name="profile_picture" id="profile_picture" accept=".jpg, .jpeg, .png">
-	</p>
-</fieldset>
+		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+			<label for="profile_picture"><?php _e( 'Upload Profile Picture', 'woocommerce' ); ?></label>
+			<input type="file" name="profile_picture" id="profile_picture" accept=".jpg, .jpeg, .png">
+		</p>
+	</fieldset>
 	<?php
 } );
 
